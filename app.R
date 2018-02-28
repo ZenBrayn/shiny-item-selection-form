@@ -8,15 +8,18 @@
 library(shiny)
 library(stringr)
 
+# These are the pre-determined items the
+# user can select from
 items <- c("Item 1",
            "Item 2",
            "Item 3",
            "Item 4",
            "Item 5")
 
+# The total number of items the user must select
 max_items_sel <- 5
 
-# Define UI for application that draws a histogram
+# UI for item selection
 ui <- fluidPage(
   shinyjs::useShinyjs(),
   
@@ -78,7 +81,7 @@ ui <- fluidPage(
   )
 )
 
-# Define server logic required to draw a histogram
+# Server to deal with the item selections and data submission
 server <- function(input, output) {
   
   
